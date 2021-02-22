@@ -67,49 +67,6 @@
 .TreeList li>ul{padding-left: 30px;}
 .TreeList li span{text-align: left; line-height: 30px; }
 .TreeList li:hover{color:#fff;}
-.TreeLeft{padding-top: 10px;}
-/* .TreeLeft ul{height: 258px;overflow: auto;}
-.TreeLeft ul::-webkit-scrollbar{width:6px; position: absolute; height:10px;}
-.TreeLeft ul::-webkit-scrollbar-track{background: rgba(128,128,128,0.5);border-radius: 5px;}
-.TreeLeft ul::-webkit-scrollbar-thumb{background: rgba(77,156,227,0.6);border-radius: 10px;}
-.TreeLeft ul::-webkit-scrollbar-thumb:hover{background: rgba(77,156,227,0.6);}
-.TreeLeft ul::-webkit-scrollbar-corner{background: #179a16;}
-.TreeLeft ul li{margin: 0;padding: 0;font-size: 16px;text-align: left;user-select: none;}
-.TreeLeft ul li:hover{color: #268ae4 !important;} */
-.ResourceMapTreeUl ul {width: 100%;height: auto;overflow: hidden;margin: 0;padding: 0;font-size: 14px;user-select: none;}
-.ResourceMapTreeUl ul li {width: 100%;line-height: 25px;cursor: pointer;margin: 0;padding: 0;font-size: 14px;}
-.ResourceMapTreeUl ul li em {display: inline-block;position: absolute;right: 30px;}
-.ResourceMapTreeUl ul li span {float: left;display: flex;align-items: center;}
-.ResourceMapTreeUl ul li span i {width: 14px;height: 14px;float: left;margin: 8px 3px 8px 12px;}
-.ResourceMapTreeUl ul li span i.rightjt {background: url("../images/admin/rightjt.png") no-repeat center center;}
-.ResourceMapTreeUl ul li span i.downjt {background: url("../images/admin/downjt.png") no-repeat center center;}
-.ResourceMapTreeUl ul li span i.group {background: url("../images/admin/group.png") no-repeat center center;}
-.ResourceMapTreeUl ul li span i.grid {background: url("../images/admin/grid.png") no-repeat center center;}
-.ResourceMapTreeUl ul li span i.details {background: url("../images/admin/details.png") no-repeat center center;}
-.ResourceMapTreeUl ul li>ul {padding-left: 20px;display: none;}
-.ResourceMapTreeUl {width:100%;height: 96%;overflow: auto;position: relative;}
-.ResourceMapTreeUl::-webkit-scrollbar {width: 5px;position: absolute;height: 5px;}
-.ResourceMapTreeUl::-webkit-scrollbar-track {background: rgba(128, 128, 128, 0.5);border-radius: 5px;}
-.ResourceMapTreeUl::-webkit-scrollbar-thumb {background: rgba(77, 156, 227, 0.6);border-radius: 10px;}
-.ResourceMapTreeUl::-webkit-scrollbar-thumb:hover {background: rgba(77, 156, 227, 0.6);}
-.ResourceMapTreeUl::-webkit-scrollbar-corner {background: #179a16;}
-.TreeLeft .Treeseach{display: flex;align-items: center;}
-.TreeLeft .Treeseach input{width: 60%;border: 1px solid #268ae4;color: white;padding: 3px 5px;margin-right: 5px;}
-.TreeLeft .Treeseach button{background-color: #268ae4;color: white;border: 1px solid #268ae4;outline: none;}
-.TreeLeft .Treeseach button:hover{background-color: #0d76d1;cursor: pointer;}
-.TreeRight>p{text-align: center;font-size: 16px;color: white;background-color: #314b5a;padding: 10px 0;}
-/* .TreeRight ul{height:200px;overflow: auto;}
-.TreeRight ul li{margin: 0;padding: 0;font-size: 14px;width: 100%;text-align: left;display: flex;align-items: center;line-height: 30px;user-select: none;}
-.TreeRight ul li input[type="checkbox"]{width: 14px;height: 14px;margin: 0 5px;}
-.TreeRight ul::-webkit-scrollbar{width:6px; position: absolute; height:10px;}
-.TreeRight ul::-webkit-scrollbar-track{background: rgba(128,128,128,0.5);border-radius: 5px;}
-.TreeRight ul::-webkit-scrollbar-thumb{background: rgba(77,156,227,0.6);border-radius: 10px;}
-.TreeRight ul::-webkit-scrollbar-thumb:hover{background: rgba(77,156,227,0.6);}
-.TreeRight ul::-webkit-scrollbar-corner{background: #179a16;} */
-.btnQd{background: url("../images/admin/configBut.png") no-repeat center center;cursor: pointer;width: 96px;height: 37px;border: none;margin-right: 10px;margin-top: 10px;color: #fff;font-size: 18px;text-align: center;line-height: 30px;outline: none;}
-.Alertlist>ul{display: none;}
-.Alarmlist li:hover{background: none;}
-.Alarmlist li h2:hover{color:#268ae4;}
 .TreeList li:before {position: absolute;top: 15px;left: 0;width: 10px;height: 1px;margin: auto;content: '';background-color: #999;}
 .TreeList li:after {position: absolute;top: 0;bottom: 0;left: 0;width: 1px;height: 100%;content: '';background-color: #999;}
 .TreeList .Alert{float: left; width: 80px; height: auto; border:1px solid #278ad5; padding: 5px; margin-left:5em; background: rgba(0,0,0,0.74);
@@ -365,7 +322,7 @@ button.undefindList{float: left; background: none; width: 80px; height: 30px; co
 
 .videoAlart{position: absolute; top:0; left:0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10; overflow: hidden;}
 .videoAlartCont{width: 70%; height: 85%; margin: 5% 15%;}
-.videoAlartCont i{background: url("../images/admin/close.png") no-repeat center center; background-size: 100% 100%; width: 25px; height: 25px; position: absolute; z-index: 1; right:68%; margin-right: -10px; margin-top: -10px;top:1.5%;}
+.videoAlartCont i{background: url("../images/admin/close.png") no-repeat center center; background-size: 100% 100%; width: 25px; height: 25px; position: absolute; z-index: 1; right:14%; margin-right: -10px; margin-top: -10px;top:12.5%;}
 
 
 .ren{position: absolute;font-size: 16px; line-height: 40px;z-index:5;top: 110px; padding:10px;left: 20px;width: 400px;height: 430px;border-radius: 5px;box-shadow: 0px 0px 18px #0087ff inset;background: rgba(1,15,30,0.86);border: 2px solid #4d9ce3;color: #fff;}
