@@ -1,0 +1,78 @@
+.PositionRight:hover{
+    color: #69b2e5;
+}
+/* 添加位置 */
+.addPositionBox{
+    position: absolute;
+    width: 270px;
+    height: 150px;
+    top: -305px;
+    left: 350px;
+    background-image: url("../images/foot/addPosition.png");
+}
+.addPositionButtonArea{
+    margin-top:38px;
+}
+.addPosBtn{
+    float: left;
+    width: 54px;
+    line-height: 28px;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #bbb;
+    border-radius: 8px ;
+}
+#locationName{
+    width: 136px;
+    line-height: 20px;
+    border: 1px solid #eee;
+    border-radius: 4px ;
+    color: #fff;
+    margin-left:16px
+}
+.PositionLeftChange {
+    overflow: hidden;
+    width: 910px;
+    overflow: hidden;
+    padding-right:20px ;
+
+}
+
+.PositionList {
+    width: auto;
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+.PositionList::-webkit-scrollbar {
+    height: 10px;
+    position: absolute;
+}
+
+.PositionList::-webkit-scrollbar-track {
+    background: rgba(128,128,128,0.5);
+    border-radius: 5px;
+}
+
+.PositionList::-webkit-scrollbar-thumb {
+    background: rgba(77,156,227,0.6);
+    border-radius: 10px;
+}
+
+.PositionList::-webkit-scrollbar-thumb:hover {
+    background: rgba(77,156,227,0.6);
+}
+
+.PositionList::-webkit-scrollbar-corner {
+    background: #179a16;
+}
+/* Public公用组件 */
+.PublicBox{
+    width: 270px;
+    height: 150px;
+    color: white;
+    position: absolute;
+    top: 100px;
+    background-image: url("../images/foot/addPosition.png");
+}

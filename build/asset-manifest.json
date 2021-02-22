@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "./static/css/main.6fa8a2aa.chunk.css",
+    "main.js": "./static/js/main.872415c6.chunk.js",
+    "main.js.map": "./static/js/main.872415c6.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.fc6d17de.js",
+    "runtime-main.js.map": "./static/js/runtime-main.fc6d17de.js.map",
+    "static/js/2.c6c1afc3.chunk.js": "./static/js/2.c6c1afc3.chunk.js",
+    "static/js/2.c6c1afc3.chunk.js.map": "./static/js/2.c6c1afc3.chunk.js.map",
+    "index.html": "./index.html",
+    "precache-manifest.ab70bc566fbeaa62bb78a1e07f6a8514.js": "./precache-manifest.ab70bc566fbeaa62bb78a1e07f6a8514.js",
+    "service-worker.js": "./service-worker.js",
+    "static/css/main.6fa8a2aa.chunk.css.map": "./static/css/main.6fa8a2aa.chunk.css.map",
+    "static/js/2.c6c1afc3.chunk.js.LICENSE.txt": "./static/js/2.c6c1afc3.chunk.js.LICENSE.txt",
+    "static/media/common.css": "./static/media/zc_xz.f3014c82.png",
+    "static/media/base.css": "./static/media/title.5b9b7db0.png",
+    "static/media/RenIcon.png": "./static/media/RenIcon.74afb808.png",
+    "static/media/Incentiveps.css": "./static/media/RenSearch.9008b657.png",
+    "static/media/admin.css": "./static/media/tatal.761fd578.png",
+    "static/media/home.css": "./static/media/addPosition.64541b9f.png",
+    "static/media/loginLogo.png": "./static/media/loginLogo.64f42920.png",
+    "static/media/moreIcon.png": "./static/media/moreIcon.a391e678.png",
+    "static/media/video-diqiu.mp4": "./static/media/video-diqiu.6c2b416b.mp4"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fc6d17de.js",
+    "static/js/2.c6c1afc3.chunk.js",
+    "static/css/main.6fa8a2aa.chunk.css",
+    "static/js/main.872415c6.chunk.js"
+  ]
+}
