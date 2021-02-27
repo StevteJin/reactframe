@@ -1073,6 +1073,15 @@ export const Common = {
             parameter:data
         };
         if(frame == null){return};frame.contentWindow.postMessage(sendData,"*");
+    },
+    //地图二维三维切换
+    dimension(data){
+        var sendData= {
+            Event: '',
+            ModName: "dimension",
+            parameter:data
+        };
+        if(frame == null){return};frame.contentWindow.postMessage(sendData,"*");
     }
     /*    //巡逻摄像头
         poamingPlaybackS(){

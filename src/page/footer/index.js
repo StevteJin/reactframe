@@ -5,6 +5,8 @@ import Position from "./components/position";
 import More from "./components/more";
 import Customizing from "./components/customizing";
 import Point from "./components/point";
+import Dimension from "./components/dimension";
+
 
 class Footer extends Component{
     constructor(props){
@@ -22,6 +24,7 @@ class Footer extends Component{
                         <More/>
                         <Customizing/>
                         <Point/>
+                        <Dimension/>
                     </div>
                     <div className="PageShow">
                         <div className="PageShowCont">

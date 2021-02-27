@@ -76,7 +76,7 @@ class More extends PureComponent{
         this.VideoSee = this.VideoSee.bind(this)//查看视频
     }
     componentDidMount() {
-        this.getxgList();
+        // this.getxgList();
         window.receiveMessageFromIndex = function ( e ) {
             if(e !== undefined){
                 //  console.log( '我是react,我接受到了来自iframe的模型ID：', e.data);
