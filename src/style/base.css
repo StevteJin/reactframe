@@ -385,3 +385,76 @@ table thead th {width: 100px;font-size: 18px; color:#fff;}
     text-align: center;
     line-height: 20px;
 }
+.box{width: 1100px;border: 1px solid #54A3F6;height: 400px;background: rgba(0,0,0,0.66); box-shadow: 0px 0px 18px #0087ff inset;position: absolute;bottom: 300px;right: 210px;display: none;}
+.box .NanMen .Nan-Title{height: 40px;line-height: 10px;border-bottom: 1px solid #54A3F6;color: #fff;display: flex;justify-content: space-between;align-items: center;}
+.box .NanMen .Nan-Title p{margin:12px;}
+ .shebeiname ul,li{padding: 0;list-style: none;text-align: left }
+ .shebeiname ul {display: flex;margin: 12px;justify-content: space-between;}
+ .shebeiname ul li{font-size: 14px;background: none;}
+ .shebeiname ul li span{color: #fff;padding-left: 4px;}
+
+ .shebeiname ul li input{width: 71%;border: 1px solid #0685C1 ;background: none;color: #fff;height: 20px;}
+ /* .shebeiname ul li .inputfirst{width: 40%;border: 1px solid #0685C1 ;background: none;} */
+
+button{width:60px;background:#015195;border:none;color:#fff;border-radius:4px;outline:none;margin: 10px 10px;height: 20px;}
+ .SelectTable{  border: 1px solid #4590D6;
+	height: 264px;
+	overflow: auto;
+	overflow-y: scroll;
+    overflow-x: hidden;
+}
+ .Nan-Table table{
+    width: 100%;
+    height: auto;
+    border: 1px solid #268ae4;
+    margin-right: 5px;
+    table-layout: fixed;
+    color: white;
+    font-size: 16px;
+    border-collapse: collapse;
+   
+   
+   
+ }
+ .Nan-Table  table td{
+    border-top: 1px solid #268ae4;
+    border-bottom: 1px solid #268ae4;
+    height: 35px;
+    line-height: 35px;
+    width: 20%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    padding-left: 5px;
+    font-size: 12.3px;
+    color: #fff;
+    
+  
+ }
+ 
+ .Nan-Table  table th {
+    line-height: 30px;
+    font-size: 13px;
+    height: 30px;
+  
+    background: #0C2641;
+    text-align: left;
+   padding-left: 10px;
+  
+   
+  }
+  ::-webkit-scrollbar { 
+    width: 2px;   /* 滚动条宽度， width：对应竖滚动条的宽度  height：对应横滚动条的高度*/
+    background: #007acc;
+} 
+/*定义滚动条轨道（凹槽）样式*/ 
+::-webkit-scrollbar-track { 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);    /* 较少使用 */
+    border-radius: 3px; 
+} 
+/*定义滑块 样式*/ 
+::-webkit-scrollbar-thumb { 
+    border-radius: 3px; 
+    height: 100px;    /* 滚动条滑块长度 */
+    background-color: #ccc; 
+}

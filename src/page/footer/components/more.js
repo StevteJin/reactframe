@@ -59,7 +59,13 @@ class More extends PureComponent{
             allxgList:[],
             pageSize:0,
             allpageNum:0,
-            xuhao:1
+            xuhao:1,
+            mjList:[],
+            startSwingTime:"",
+            endSwingTime:"",
+            channelCode:"",
+            mpageNum:1,
+            mpageSize:100,
             
         }
         More.this = this;
@@ -685,9 +691,79 @@ class More extends PureComponent{
             xuhao:xuhao2
         })
     }
+    //门禁---------------
+    mjClose(){
+        $("#hhbox").hide()
+    }
+    // 门禁编号
+    channelCodelist(e){
+        console.log(e.target.value)
+        this.setState({
+            channelCode:e.target.value
+        })
+    }
+    // 门禁的开始时间
+    startSwingTimelist(e){
+        console.log(e.target.value)
+        this.setState({
+            startSwingTime:e.target.value
+        })
+    }
+    // 门禁的结束时间
+    endSwingTimelist(e){
+        console.log(e.target.value)
+        this.setState({
+            endSwingTime:e.target.value
+        })
+    }
+    seacrh(){
+        const {startSwingTime,endSwingTime,channelCode} = this.state;
+        console.log(startSwingTime.replace("T"," "),endSwingTime.replace("T"," "),channelCode)
+
+        var mjjlSocket = new WebSocket('ws://10.115.171.220:9000');
+        mjjlSocket.onopen = function () {
+            var jsondata;
+            console.log("连接成功");
+            if(channelCode){
+                jsondata ={
+                    "versionsType": "SPCC",
+                    "apiType": "QueryAlarmRecordDevice",
+                    "pageNo": "1",
+                    "pageSize": "1000",
+                    "sourceCode": channelCode,
+                    "sourceTypeCode": "door",
+                    "eventTypeCode": "198914",
+                    "beginTime": startSwingTime.replace("T"," "),
+                    "endTime": endSwingTime.replace("T"," ")
+                }
+            }else{
+                jsondata ={
+                    "versionsType": "SPCC",
+                    "apiType": "QueryAlarmRecord",
+                    "pageNo": "1",
+                    "pageSize": "1000",
+                    "sourceTypeCode": "door",
+                    "eventTypeCode": "198914",
+                    "beginTime": startSwingTime.replace("T"," "),
+                    "endTime": endSwingTime.replace("T"," ")
+                }
+            }
+            console.log(jsondata)
+            mjjlSocket.send(JSON.stringify(jsondata));
+        };
+        // 当服务端处理完成后会将数据发送回来
+        mjjlSocket.onmessage = function (evt) {
+            var data = JSON.parse(evt.data)
+            console.log(data.data.list,'门禁计记录列表--处理后');
+            More.this.setState({
+                mjList:data.data.list
+            })
+            mjjlSocket.close()
+        };
+    }
     render(){
         const {index,clickIcon,moreIndex,clickIconItem,clickIconItemNav} = this.props;
-        const {activeBtn,kxList,layerList,guangboList,songList,DataList,lx_name,lx_startTime,lx_endTime,xgList,allpageNum,pageSize,xuhao} = this.state;
+        const {activeBtn,kxList,layerList,guangboList,songList,DataList,lx_name,lx_startTime,lx_endTime,xgList,allpageNum,pageSize,xuhao,startSwingTime,endSwingTime,channelCode,mjList} = this.state;
         return(
             <Fragment>
                 <li onClick={() => {clickIcon(3);this.changeStatus()}} className={activeBtn && index === 3  ? 'active' :''}>
@@ -731,7 +807,9 @@ class More extends PureComponent{
                         <div className="MoreItem" id="MoreItem8" onClick ={(even) => clickIconItem(even,8)}><i className="more13"></i>框选</div>
                          {/* <div className="MoreItem" id="MoreItem9" onClick ={(even) => clickIconItem(even,9)}><i className="more7"></i>人员定位</div> */}
                          {/* <div className="MoreItem" id="MoreItem10" onClick ={(even) => clickIconItem(even,10)}><i className="more8"></i>点播</div> */}
+                        {/* <div className="MoreItem" id="MoreItem10" onClick ={(even) => clickIconItem(even,11)}><i className="more9"></i>门禁记录</div> */}
                          {/* <div className="MoreItem" id="MoreItem10" onClick ={(even) => clickIconItem(even,15)}><i className="more8"></i>巡更统计</div> */}
+
 
                     </div>
                     : ''}
@@ -887,6 +965,53 @@ class More extends PureComponent{
                         </div>
                     </div>
                 </div>
+                {/* 这是门禁记录 */}
+                <div class="box" id="hhbox">
+                    <div className="NanMen">
+                        <div className="Nan-Title">
+                            <p>门禁记录</p>
+                            <p onClick={this.mjClose.bind(this)} style={{cursor:"pointer"}}>X</p>
+                        </div>
+                        <div className="Nan-Table">
+                            <div className="shebeiname">
+                                <ul>
+                                    <li><span>设备编号:</span><input type="text"  placeholder="输入门禁编号" className="inputfirst" value={channelCode} onChange={this.channelCodelist.bind(this)}/></li>
+                                    <li><span>开始时间:</span><input type="datetime-local" name="" id="" step="01" value={startSwingTime} onChange={this.startSwingTimelist.bind(this)}/></li>
+                                    <li><span>结束时间:</span><input type="datetime-local" name="" id="" step="01" value={endSwingTime} onChange={this.endSwingTimelist.bind(this)}/></li>
+                                    <li> <button onClick={this.seacrh.bind(this)}>搜索</button></li>
+                                </ul>
+                            </div>
+                            <div className="SelectTable">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>设备名称</th>
+                                            <th>人物名称</th>
+                                            <th>刷卡时间</th>
+                                            <th>门禁事件</th> 
+                                        </tr>
+                                    </thead>
+                                    <tbody id="doorinfo">
+                                        {
+                                            mjList.length > 0 && mjList.map((item, index) => {
+                                                return (
+                                                    <tr key={index}>
+                                                        <td>{item.sourceName}</td>
+                                                        {
+                                                            item.userData?<td>{item.userData.userName || "暂无"}</td>:<td>暂无</td>
+                                                        }
+                                                        <td>{item.alarmTime.replace("T"," ").slice(0,19)}</td>
+                                                        <td>{item.eventTypeName || '暂无'}</td>
+                                                    </tr>
+                                                )
+                                            })                              
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </Fragment>
         )
     }
@@ -1008,6 +1133,9 @@ const mapDispatch = (dispatch) => ({
                 //$(".TraceCT").show();
                  More.this.SPZC()
                  break;
+            case 11:
+                $("#hhbox").show();
+                break;
             case 15:
                 $('.xgtj').show();
                 break;

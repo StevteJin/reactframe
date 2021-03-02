@@ -5,7 +5,7 @@ import Position from "./components/position";
 import More from "./components/more";
 import Customizing from "./components/customizing";
 import Point from "./components/point";
-import Dimension from "./components/dimension";
+// import Dimension from "./components/dimension";
 
 
 class Footer extends Component{
@@ -24,7 +24,7 @@ class Footer extends Component{
                         <More/>
                         <Customizing/>
                         <Point/>
-                        <Dimension/>
+                        {/* <Dimension/> */}
                     </div>
                     <div className="PageShow">
                         <div className="PageShowCont">
