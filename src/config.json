@@ -1,6 +1,6 @@
 {
 
-  "Url": "http://192.168.0.211:80/api/33010801001/",
+  "Url": "http://192.168.0.211/api/fuyang/",
   "IframeUrl": "http://192.168.0.106/%E9%A9%AC%E9%9E%8D%E5%B1%B1/",
   "WebSocketUrl": "ws://192.168.0.211:8091",
   "VideoUrl": "http://127.0.0.1:5501/src/play.html"

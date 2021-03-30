@@ -165,7 +165,6 @@ class AlarmList extends Component {
                             id: JSON.parse(e.data).device_info.id,
                         }
                         Common.CoordinateModelID(dataC); //锟缴癸拷去
-                        console.log(dataC,'冲冲冲')
                         Common.returnData(JSON.parse(e.data).device_info)
                         Common.AlarmBox(JSON.parse(e.data));
                         console.log(2, WebList)

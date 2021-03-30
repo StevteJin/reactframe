@@ -153,8 +153,9 @@ class ResourceMap extends Component{
                 
             }else{
                 if(this.state.isShow){Common.BuildingShow({show :true});this.setState({isShow:false})}
-                let data={id:name.id}
+                let data={id:name.id,fl:name.floor_id}
                 Common.returnData(name)
+                console.log(name,name.floor_id,'啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊')
                 Common.CoordinateModelID(data);//飞过去
             }
         }

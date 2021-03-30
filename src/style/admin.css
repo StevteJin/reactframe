@@ -394,7 +394,7 @@ button.undefindList{float: left; background: none; width: 80px; height: 30px; co
 .RenImg input{position: absolute;width: 86px; height: 86px; margin-left: 50%; left:-43px;z-index:200;opacity: 0;}
 .faceButtonArea{float:left; width: 100%;height:auto; overflow: hidden; margin: 20px 0;}
 .faceButtonArea button{border: 1px solid #122B46;width: 130px;height:35px; line-height:33px;background:rgba(0,0,0,0.5);color:#01a1ff;font-size: 14px;}
-.faceButtonArea button.faceUpload{margin-right: 40px;}
+.faceButtonArea button.faceUpload{margin-right: 10px;}
 .faceTimeStamp{width: 100%;height:auto;overflow: hidden;border-top:1px solid #122B46;}
 .faceTimeStamp li{float:left; width: 298px; border-bottom:1px solid #122B46;border-left:1px solid #122B46;border-right:1px solid #122B46; height: 35px; line-height: 32px; color:#01a1ff;}
 .faceTimeStamp li span{float: left; width: 100px; text-align: center; font-size: 14px;}
