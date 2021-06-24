@@ -33,6 +33,7 @@
     }
   }
   .s_menu {
+    margin-top: 7%;
     ul {
       overflow: hidden;
       margin-left: 18px;
@@ -60,6 +61,7 @@
     background-size: 100% 100%;
     margin-left: 18px;
     margin-top: 25px;
+    margin-bottom:8%;
     overflow: hidden;
     .pic {
       width: 31.5%; //126px
@@ -75,7 +77,7 @@
         font-family: PingFang SC;
         font-weight: 400;
         color: #dedad4;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       .p_value {
         font-size: 22px;
@@ -85,6 +87,7 @@
       }
       .p_car_name {
         font-size: 18px;
+        margin-bottom: 12px;
       }
       .p_car_value {
         font-size: 28px;
@@ -92,13 +95,89 @@
     }
     .people_line {
       float: left;
-      margin-left:20px;
-      margin-top:-10px;
+      margin-left: 20px;
+      margin-top: -10px;
     }
     .p_con_box {
       margin-left: 23px;
       float: left;
       margin-top: 15%;
+    }
+  }
+  .y_box {
+    background-image: url(../../images/Jhome/y_bg.png);
+    background-size: 100% 100%;
+    width: 91.32%; //400px
+    height: 16.84%; //160px
+    margin-left: 18px;
+    margin-top:6%;
+    margin-bottom:8%;
+    .y_title {
+      overflow: hidden;
+      .y_left {
+        display: inline-block;
+        width: 30%; //131px
+        height: 2.74%; //26px
+        background-image: url(../../images/Jhome/y_title_bg.png);
+        background-size: 100% 100%;
+        font-size: 16px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #ffeeda;
+        text-align: center;
+        line-height: 26px;
+        margin-left: 18px;
+        margin-top: 10px;
+        float: left;
+      }
+      .y_right {
+        display: inline-block;
+        font-size: 14px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #ffeeda;
+        float: right;
+        margin-right: 18px;
+        line-height: 26px;
+        margin-top: 10px;
+      }
+    }
+    .y_co {
+      font-size: 14px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #ffeeda;
+      margin-left: 18px;
+      margin-top: 2.6%; //20px
+    }
+    .y_btn_box {
+      margin-left: 107px;
+      margin-top: 21px;
+      .y_btn {
+        width: 84px;
+        height: 26px;
+        background-image: url(../../images/Jhome/anniu.png);
+        background-size: 100% 100%;
+        font-size: 14px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #ffeeda;
+        float: left;
+        margin-right: 19px;
+        text-align: center;
+        line-height: 26px;
+        cursor: pointer;
+      }
+    }
+  }
+  .yc_box {
+    margin-top:6%;
+    .yc_title {
+      font-size: 16px;
+      font-family: PingFang SC;
+      font-weight: 300;
+      color: #ffe6a6;
+      margin-left: 18px;
     }
   }
 }

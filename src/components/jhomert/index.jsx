@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import * as echarts from "echarts";
 import "./style.scss";
 import { useLocation } from "react-router-dom";
 
@@ -33,8 +34,117 @@ function Jhomert() {
   ];
 
   const { pathname } = useLocation(); //存储当前路由地址`
+  let initChart1 = () => {
+    let element = document.getElementById("main1");
+    let myChart = echarts.init(element);
+    let option = {
+      xAxis: {
+        type: "category",
+        data: ["2.12", "2.13", "2.14", "2.15", "2.16", "2.17", "2.18"],
+        splitLine: {
+          //网格线
+          show: true,
+          lineStyle: {
+            type: "dashed", //网格线样式
+            width: 0.2,
+            color: ["#fff", "#fff"],
+          },
+        },
+        axisLabel: {
+          interval: 0,
+          textStyle: {
+            color: "#D1CAB5",
+            fontSize: 10,
+          },
+        },
+      },
+      yAxis: {
+        type: "value",
+        splitLine: {
+          //网格线
+          show: true,
+          lineStyle: {
+            type: "dashed", //网格线样式
+            width: 0.2,
+            color: ["#fff", "#fff"],
+          },
+        },
+        axisLabel: {
+          interval: 0,
+          textStyle: {
+            color: "#D1CAB5",
+            fontSize: 10,
+          },
+        },
+      },
+      grid: {
+        top: "10%",
 
-  useEffect(() => {}, [activeIndex]);
+        left: "10%",
+
+        right: "10%",
+
+        bottom: "10%",
+      },
+      series: [
+        {
+          data: [10, 25, 15, 25, 20, 10, 25],
+          type: "line",
+          smooth: true, //圆润
+          symbol: "none", //不要圈
+          itemStyle: {
+            color: {
+              type: "linear",
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [
+                {
+                  offset: 0,
+                  color: "#FF8802", // 0% 处的颜色
+                },
+                {
+                  offset: 1,
+                  color: "transparent", // 100% 处的颜色
+                },
+              ],
+              global: false, // 缺省为 false
+            },
+          },
+          lineStyle: {
+            color: {
+              type: "linear",
+              x: 0,
+              y: 0,
+              x2: 1,
+              y2: 1,
+              colorStops: [
+                {
+                  offset: 0,
+                  color: "#FF8802 ", // 0% 处的颜色
+                },
+                {
+                  offset: 0.5,
+                  color: "#FF8802 ", // 0% 处的颜色
+                },
+                {
+                  offset: 1,
+                  color: "#FF8802 ", // 100% 处的颜色
+                },
+              ],
+              global: false, // 缺省为 false
+            },
+          },
+          areaStyle: {},
+        },
+      ],
+    };
+    myChart.setOption(option);
+  };
+  useEffect(() => {
+    initChart1();
+  }, [activeIndex]);
 
   return (
     <div className="statistical">
@@ -95,9 +205,27 @@ function Jhomert() {
         <img src={require("../../images/Jhome/icon-1.png")} alt="" />
         <span>应急预案</span>
       </div>
+      <div className="y_box">
+        <div className="y_title">
+          <span className="y_left">烟感报警</span>
+          <span className="y_right">2021.04.25 10:54:02</span>
+        </div>
+        <div className="y_co y_first">设备位置：设备位置信息6号</div>
+        <div className="y_co y_second">设备名称：烟感设备1</div>
+        <div className="y_btn_box">
+          <div className="y_btn">启动预案</div>
+          <div className="y_btn">设为误报</div>
+        </div>
+      </div>
       <div className="e_top_title">
         <img src={require("../../images/Jhome/icon-1.png")} alt="" />
         <span>防疫情况</span>
+      </div>
+      <div className="yc_box">
+        <div className="yc_title">体温异常趋势图（7天）</div>
+        <div>
+          <div id={"main1"} style={{ height: 200 }}></div>
+        </div>
       </div>
     </div>
   );
