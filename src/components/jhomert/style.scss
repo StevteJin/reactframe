@@ -1,0 +1,93 @@
+.statistical {
+  width: 23%; //438px
+  height: 88%; //950px
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ffbd75;
+  overflow: hidden;
+  position: absolute;
+  right: 10px;
+  top: 6%;
+  .e_top_title {
+    background-image: url(../../images/Jhome/e_title_bg.png);
+    width: 41.32%; //181px
+    height: 2.7%; //26px
+    background-size: 100% 100%;
+    margin-left: 18px;
+    margin-top: 13px;
+    margin-bottom: 4.1%; //39px
+    padding-top: 1%;
+    padding-bottom: 1%;
+    overflow: hidden;
+    img {
+      width: 11%;
+      margin-left: 16px;
+      float: left;
+    }
+    span {
+      font-size: 18px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #ffe6a6;
+      display: inline-block;
+      margin-left: 6px;
+    }
+  }
+  .s_menu {
+    ul {
+      overflow: hidden;
+      margin-left: 18px;
+      li {
+        width: 22.8%; //100px;
+        height: 3.2%; //30px
+        line-height: 30px;
+        font-size: 16px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #ffeeda;
+        float: left;
+        text-align: center;
+      }
+      .active {
+        background-image: url(../../images/Jhome/e_name_bg.png);
+        background-size: 100% 100%;
+      }
+    }
+  }
+  .people_box {
+    width: 91.3%; //400px
+    height: 17.7%; //168px
+    background-image: url(../../images/Jhome/s-bj.png);
+    background-size: 100% 100%;
+    margin-left: 18px;
+    margin-top: 25px;
+    overflow: hidden;
+    .pic {
+      width: 28.8%; //126px
+      // height:126px;//126px
+      margin-top: 3%; //22px
+      margin-left: 6.75%; //27px
+      float: left;
+    }
+    .p_box {
+      float: left;
+      .p_name {
+        font-size: 16px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #dedad4;
+      }
+      .p_value {
+        font-size: 22px;
+        font-family: ShiShangZhongHeiJianTi;
+        font-weight: 400;
+        color: #dedad4;
+      }
+      .p_car_name {
+        font-size: 18px;
+      }
+      .p_car_value {
+        font-size: 28px;
+      }
+    }
+  }
+}

@@ -61,7 +61,6 @@ function Jhomelt() {
 
   return (
     <div className="big_e_box">
-      <div className="e_state_box">
         <div className="e_top_title">
           <img src={require("../../images/Jhome/icon-1.png")} alt="" />
           <span>设备状态</span>
@@ -123,7 +122,6 @@ function Jhomelt() {
             );
           })}
         </div>
-      </div>
     </div>
   );
 }

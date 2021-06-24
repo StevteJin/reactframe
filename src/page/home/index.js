@@ -12,6 +12,7 @@ import Alarm from "../public/AlarmList";
 //改写
 import Jheader from "../../components/jheader/index";
 import Jhomelt from "../../components/jhomelt/index";
+import Jhomert from "../../components/jhomert/index";
 import Jfooter from "../../components/jfooter/index";
 
 import $ from "jquery";
@@ -206,6 +207,7 @@ class Index extends Component {
               <CesiumConent></CesiumConent>
             </div>
           </div>
+          {/* 金 start */}
           <div>
             <Jheader />
           </div>
@@ -215,6 +217,10 @@ class Index extends Component {
           <div>
             <Jfooter />
           </div>
+          <div>
+            <Jhomert />
+          </div>
+          {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>
           </div> */}
