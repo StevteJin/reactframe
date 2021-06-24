@@ -8,14 +8,21 @@ import axios from "axios";
 import Footer from "../footer/index";
 import Alarm from "../public/AlarmList";
 // import VehicleInspection from '../public/VehicleInspection';
-
-//改写
-import Jheader from "../../components/jheader/index";
-import Jhomelt from "../../components/jhomelt/index";
-import Jhomert from "../../components/jhomert/index";
-import Jfooter from "../../components/jfooter/index";
-
 import $ from "jquery";
+
+//金改写 start
+//页眉
+import Jheader from "../../components/jheader/index";
+//页脚
+import Jfooter from "../../components/jfooter/index";
+//首页左边
+import Jhomelt from "../../components/jhomelt/index";
+//首页右边
+import Jhomert from "../../components/jhomert/index";
+//智慧导游
+import Jguide from "../../components/jguide/index";
+
+//金改写 end
 
 class Index extends Component {
   constructor(props) {
@@ -212,14 +219,15 @@ class Index extends Component {
             <Jheader />
           </div>
           <div>
+            <Jfooter />
+          </div>
+          {/* <div>
             <Jhomelt />
           </div>
           <div>
-            <Jfooter />
-          </div>
-          <div>
             <Jhomert />
-          </div>
+          </div> */}
+          <Jguide />
           {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>
