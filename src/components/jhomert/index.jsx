@@ -61,19 +61,32 @@ function Jhomert() {
         />
         {peopleData.map((item, index) => {
           return (
-            <div key={index} className="p_box">
-              <div
-                className={item.class == "car" ? "p_name p_car_name" : "p_name"}
-              >
-                {item.name}
+            <div className="p_con_box">
+              <div key={index} className="p_box">
+                <div
+                  className={
+                    item.class == "car" ? "p_name p_car_name" : "p_name"
+                  }
+                >
+                  {item.name}
+                </div>
+                <div
+                  className={
+                    item.class == "car" ? "p_value p_car_value" : "p_value"
+                  }
+                >
+                  {item.value}
+                </div>
               </div>
-              <div
-                className={
-                  item.class == "car" ? "p_value p_car_value" : "p_value"
-                }
-              >
-                {item.value}
-              </div>
+              {item.class == "car" ? (
+                <img
+                  className="people_line"
+                  src={require("../../images/Jhome/people_line.png")}
+                  alt=""
+                />
+              ) : (
+                ""
+              )}
             </div>
           );
         })}

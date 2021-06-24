@@ -55,16 +55,16 @@
   }
   .people_box {
     width: 91.3%; //400px
-    height: 17.7%; //168px
+    height: 168px; //168px
     background-image: url(../../images/Jhome/s-bj.png);
     background-size: 100% 100%;
     margin-left: 18px;
     margin-top: 25px;
     overflow: hidden;
     .pic {
-      width: 28.8%; //126px
+      width: 31.5%; //126px
       // height:126px;//126px
-      margin-top: 3%; //22px
+      margin-top: 6%; //22px
       margin-left: 6.75%; //27px
       float: left;
     }
@@ -75,6 +75,7 @@
         font-family: PingFang SC;
         font-weight: 400;
         color: #dedad4;
+        margin-bottom: 10px;
       }
       .p_value {
         font-size: 22px;
@@ -88,6 +89,16 @@
       .p_car_value {
         font-size: 28px;
       }
+    }
+    .people_line {
+      float: left;
+      margin-left:20px;
+      margin-top:-10px;
+    }
+    .p_con_box {
+      margin-left: 23px;
+      float: left;
+      margin-top: 15%;
     }
   }
 }
