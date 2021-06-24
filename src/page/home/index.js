@@ -21,6 +21,9 @@ import Jhomelt from "../../components/jhomelt/index";
 import Jhomert from "../../components/jhomert/index";
 //智慧导游
 import Jguide from "../../components/jguide/index";
+//村情信息左边
+import Jmsglt from "../../components/jmsglt/index";
+//村情信息右边
 
 //金改写 end
 
@@ -221,13 +224,16 @@ class Index extends Component {
           <div>
             <Jfooter />
           </div>
+
           {/* <div>
             <Jhomelt />
           </div>
           <div>
             <Jhomert />
           </div> */}
-          <Jguide />
+
+          {/* <Jguide /> */}
+          <Jmsglt />
           {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>

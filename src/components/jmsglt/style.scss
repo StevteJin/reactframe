@@ -1,0 +1,101 @@
+.jmsg_lt_box {
+  width: 23%; //438px
+  height: 88%; //950px
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ffbd75;
+  overflow: hidden;
+  position: absolute;
+  left: 10px;
+  top: 6%;
+  .jmsg_lt_title {
+    background-image: url(../../images/Jhome/e_title_bg.png);
+    width: 41.32%; //181px
+    height: 2.7%; //26px
+    background-size: 100% 100%;
+    margin-left: 18px;
+    margin-top: 13px;
+    margin-bottom: 3.68%; //35px
+    padding-top: 1%;
+    padding-bottom: 1%;
+    overflow: hidden;
+    img {
+      width: 11%;
+      margin-left: 16px;
+      float: left;
+    }
+    span {
+      font-size: 18px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #ffe6a6;
+      display: inline-block;
+      margin-left: 6px;
+    }
+  }
+  .jmsg_num_box {
+    overflow: hidden;
+    .jmsg_num {
+      margin-bottom: 23px;
+      .jmsg_num_img {
+        width: 80px;
+        height: 80px;
+        margin-left: 18px;
+        float: left;
+        margin-top: 11px;
+      }
+      .jmsg_num_right {
+        float: left;
+        width: 308px;
+        height: 97px;
+        margin-left: 12px;
+        box-sizing: border-box;
+        overflow: hidden;
+        .jmsg_line {
+          width: 308px;
+          height: 7px;
+        }
+        .jmsg_num_name {
+          font-size: 16px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #ffeeda;
+          margin-top: 11px;
+          margin-bottom: 18px;
+        }
+        .jmsg_num_vu {
+          overflow: hidden;
+          .jmsg_num_vu_left {
+            float: left;
+            .jmsg_vu_value {
+              font-size: 26px;
+              font-family: PangMenZhengDao;
+              font-weight: 400;
+              color: #ffe6a6;
+            }
+            .jmsg_vu_unit {
+              font-size: 22px;
+              font-family: PangMenZhengDao;
+              font-weight: 400;
+              color: #ffe6a6;
+            }
+          }
+          .jmsg_num_vu_right {
+            float: right;
+            span {
+              font-size: 16px;
+              font-family: PingFang SC;
+              font-weight: 400;
+              color: #ffeeda;
+            }
+            img {
+              width: 16px;
+              height: 20px;
+              margin-right: 44px;
+              margin-left: 9px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
