@@ -3,30 +3,37 @@ import "./style.scss";
 import { useLocation } from "react-router-dom";
 
 function Jfooter() {
-  const [] = useState();
+  const [activeValue, setActive] = useState("home");
   const { pathname } = useLocation(); //存储当前路由地址`
   const navData = [
     {
       name: "首页",
       pic: "home",
+      active: "home_active",
       value: "home",
     },
     {
       name: "智慧导游",
       pic: "guide",
+      active: "guide_active",
       value: "guide",
     },
     {
       name: "村情信息",
       pic: "vmsg",
+      active: "vmsg_active",
       value: "vmsg",
     },
     {
       name: "数据中心",
       pic: "data",
+      active: "data_active",
       value: "data",
     },
   ];
+  const handle_top = (item, index) => {
+    setActive(item.value);
+  };
   useEffect(() => {}, []);
 
   return (
@@ -40,12 +47,22 @@ function Jfooter() {
       <ul className="j_center">
         {navData.map((item, index) => {
           return (
-            <li key={index}>
-              <img
-                src={require("../../images/Jhome/" + item.pic + ".png")}
-                alt=""
-              />
-              <span>{item.name}</span>
+            <li key={index} onClick={() => handle_top(item, index)}>
+              {activeValue == item.value ? (
+                <img
+                  src={require("../../images/Jhome/" + item.active + ".png")}
+                  alt=""
+                />
+              ) : (
+                <img
+                  src={require("../../images/Jhome/" + item.pic + ".png")}
+                  alt=""
+                />
+              )}
+
+              <span className={activeValue == item.value ? "activeValue" : ""}>
+                {item.name}
+              </span>
             </li>
           );
         })}
