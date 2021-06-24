@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import * as echarts from "echarts";
 import "./style.scss";
 import { useLocation } from "react-router-dom";
 
@@ -25,8 +26,78 @@ function Jmsglt() {
     },
   ];
   const { pathname } = useLocation(); //存储当前路由地址`
+  let initChart2 = () => {
+    let element = document.getElementById("main2");
+    let myChart = echarts.init(element);
+    let datas = [
+      ////////////////////////////////////////
+      [
+        { name: "药材类", value: 25 },
+        { name: "粮油类", value: 25 },
+        { name: "水产类", value: 25 },
+        { name: "瓜果类", value: 25 },
+      ],
+    ];
+    let option = {
+      title: {
+        left: "center",
+        textStyle: {
+          color: "#999",
+          fontWeight: "normal",
+          fontSize: 14,
+        },
+      },
+      series: datas.map(function (data, idx) {
+        return {
+          type: "pie",
+          radius: [40, 60],
+          top: "100px",
+          height: "33.33%",
+          left: "center",
+          width: 400,
+          itemStyle: {
+            borderColor: "#fff",
+            borderWidth: 1,
+          },
+          label: {
+            alignTo: "edge",
+            formatter: "{name|{b}}\n{time|{c} %}",
+            minMargin: 5,
+            edgeDistance: 10,
+            lineHeight: 15,
+            rich: {
+              time: {
+                fontSize: 10,
+                color: "#999",
+              },
+            },
+          },
+          labelLine: {
+            length: 15,
+            length2: 0,
+            maxSurfaceAngle: 80,
+          },
+          labelLayout: function (params) {
+            var isLeft = params.labelRect.x < myChart.getWidth() / 2;
+            var points = params.labelLinePoints;
+            // Update the end point.
+            points[2][0] = isLeft
+              ? params.labelRect.x
+              : params.labelRect.x + params.labelRect.width;
 
-  useEffect(() => {}, []);
+            return {
+              labelLinePoints: points,
+            };
+          },
+          data: data,
+        };
+      }),
+    };
+    myChart.setOption(option);
+  };
+  useEffect(() => {
+    initChart2();
+  }, []);
 
   return (
     <div className="jmsg_lt_box">
@@ -86,11 +157,11 @@ function Jmsglt() {
       </div>
       <div className="jmsg_category">
         <div className="jmsg_category_title">
-          <img src={require('../../images/Jhome/nong.png')} alt="" />
+          <img src={require("../../images/Jhome/nong.png")} alt="" />
           <span>农产品类别占比</span>
         </div>
         <div>
-          
+          <div id={"main2"} style={{ height: 200 }}></div>
         </div>
       </div>
     </div>
