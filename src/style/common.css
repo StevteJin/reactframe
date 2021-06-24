@@ -13,7 +13,7 @@
 .loginWrapper input{line-height: 40px; margin-bottom: 40px; height: 40px; background: rgba(68,105,134,0.36);  box-sizing: border-box; border:1px solid #446986; width: 100%; padding:0 1em; color: #fff; font-size: 16px;}
 .loginWrapper button{border:none;background: none; text-align: center; width: 100%; font-size: 22px; color: #fff; font-weight: 300; outline: none; line-height: 30px;}
 .loginWrapper button i{display: inline-block; background: url("../images/loginIcon.png") no-repeat center center; width:25px; height:25px; vertical-align: middle; margin-left: 15px;}
-.IndexHome{width:100%; position:absolute; top:100px; left:0; bottom:0;}
+.IndexHome{width:100%; position:absolute; top:0px; left:0; bottom:0;}
 
 .header{width:100%;height:100px; background: #000; display: flex; padding: 0 0.5%; box-sizing: border-box; color:#01f8ff;}
 .HeaderLeft{float:left; background: url("../images/title_left.png") no-repeat left center; width: 480px; font-size: 30px; text-indent: 100px; line-height: 78px;}
@@ -155,7 +155,7 @@
     top: 120px;
     left: 20px;
     z-index: 3;
-    width: 640px;
+    width: 350px;
 }
 .Exception .exceptionBox{
     width: auto;
@@ -307,7 +307,7 @@
 .exceptionHang>button{
     background-color:  rgba(2,15,31,1);
     color: white;
-    padding: 7px 20px;
+    /* padding: 7px 20px; */
     border-top: 1px solid rgba(76,156,225,0.5);
     border-bottom: 1px solid rgba(76,156,225,0.5);
     border-left: 2.5px solid rgba(76,156,225,1);
