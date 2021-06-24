@@ -84,8 +84,14 @@ function Jmsglt() {
         <img src={require("../../images/Jhome/icon-1.png")} alt="" />
         <span>农产品统计</span>
       </div>
-      <div>
-        
+      <div className="jmsg_category">
+        <div className="jmsg_category_title">
+          <img src={require('../../images/Jhome/nong.png')} alt="" />
+          <span>农产品类别占比</span>
+        </div>
+        <div>
+          
+        </div>
       </div>
     </div>
   );

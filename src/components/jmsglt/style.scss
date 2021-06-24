@@ -98,4 +98,21 @@
       }
     }
   }
+  .jmsg_category {
+    .jmsg_category_title {
+      margin-left:31px;
+      img {
+        width: 26px;
+        height: 18px;
+        float: left;
+      }
+      span {
+        font-size: 16px;
+        font-family: PingFang SC;
+        font-weight: 400;
+        color: #ffbd75;
+        display: inline-block;
+      }
+    }
+  }
 }
