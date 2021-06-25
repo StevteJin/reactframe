@@ -26,6 +26,7 @@ function Jmsglt() {
     },
   ];
   const { pathname } = useLocation(); //存储当前路由地址`
+  //农产品类别占比
   let initChart2 = () => {
     let element = document.getElementById("main2");
     let myChart = echarts.init(element);
@@ -86,8 +87,83 @@ function Jmsglt() {
     };
     myChart.setOption(option);
   };
+  //农产品收入统计
+  let initChart3 = () => {
+    let element = document.getElementById("main3");
+    let myChart = echarts.init(element);
+    let option = {
+      xAxis: {
+        type: "category",
+        data: ["稻谷", "大豆", "荞麦", "柑橘", "桃子", "牛蛙", "核桃"],
+        splitLine: {
+          //网格线
+          show: true,
+          lineStyle: {
+            type: "dashed", //网格线样式
+            width: 0.2,
+            color: ["#fff", "#fff"],
+          },
+        },
+        axisTick: {
+          alignWithLabel: true,
+        },
+        axisLabel: {
+          interval: 0,
+          textStyle: {
+            color: "#fff",
+            fontSize: 10,
+          },
+        },
+      },
+      yAxis: {
+        type: "value",
+        splitLine: {
+          //网格线
+          show: true,
+          lineStyle: {
+            type: "dashed", //网格线样式
+            width: 0.2,
+            color: ["#fff", "#fff"],
+          },
+        },
+        axisLabel: {
+          interval: 0,
+          textStyle: {
+            color: "#fff",
+            fontSize: 10,
+          },
+        },
+      },
+      grid: {
+        top: "10%",
+
+        left: "10%",
+
+        right: "10%",
+
+        bottom: "10%",
+      },
+      series: [
+        {
+          data: [67, 20, 40, 77, 86, 81, 75],
+          type: "bar",
+          barWidth: 20,
+          showBackground: false,
+          itemStyle: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+              { offset: 0, color: "#F5AD5C" },
+              { offset: 0.5, color: "#FF7723" },
+              { offset: 1, color: "transparent" },
+            ]),
+          },
+        },
+      ],
+    };
+    myChart.setOption(option);
+  };
   useEffect(() => {
     initChart2();
+    initChart3();
   }, []);
 
   return (
@@ -159,6 +235,9 @@ function Jmsglt() {
         <div className="jmsg_category_title">
           <img src={require("../../images/Jhome/nong.png")} alt="" />
           <span>农产品收入统计</span>
+        </div>
+        <div>
+          <div id={"main3"} style={{ height: 200 }}></div>
         </div>
       </div>
     </div>
