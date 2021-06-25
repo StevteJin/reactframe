@@ -19,6 +19,19 @@ function Jdatalt() {
       pic: "tj2",
     },
   ];
+  const iconData = [
+    {
+      name: "怪石林",
+    },
+    {
+      name: "陶瓷博物馆",
+    },
+    { name: "浮梁古县衙" },
+    { name: "瑶里古镇" },
+    {
+      name: "古窑民俗博览区",
+    },
+  ];
   const { pathname } = useLocation(); //存储当前路由地址`
   let initChart4 = () => {
     let element = document.getElementById("main4");
@@ -123,10 +136,7 @@ function Jdatalt() {
     let element = document.getElementById("main5");
     let myChart = echarts.init(element);
     let option = {
-      type: 'radar',
-      areaStyle: {},
       radar: {
-        // shape: 'circle',
         indicator: [
           { name: "古民谣博物馆", max: 6500 },
           { name: "怪石林", max: 16000 },
@@ -134,10 +144,55 @@ function Jdatalt() {
           { name: "浮梁古县衙", max: 38000 },
           { name: "瑶里古镇", max: 52000 },
         ],
+        center: ["50%", "60%"],
       },
       series: [
         {
           type: "radar",
+          lineStyle: {
+            color: {
+              type: "linear",
+              x: 0,
+              y: 0,
+              x2: 1,
+              y2: 1,
+              colorStops: [
+                {
+                  offset: 0,
+                  color: "#FF7824", // 0% 处的颜色
+                },
+                {
+                  offset: 0.5,
+                  color: "#FF7824", // 0% 处的颜色
+                },
+                {
+                  offset: 1,
+                  color: "#FF7824", // 100% 处的颜色
+                },
+              ],
+              global: false, // 缺省为 false
+            },
+          },
+          areaStyle: {
+            color: {
+              type: "linear",
+              x: 0,
+              y: 0,
+              x2: 0,
+              y2: 1,
+              colorStops: [
+                {
+                  offset: 0,
+                  color: "rgba(255,120,36, 0.8)", // 0% 处的颜色
+                },
+                {
+                  offset: 1,
+                  color: "rgba(255,120,36, 0.8)", // 100% 处的颜色
+                },
+              ],
+              global: false, // 缺省为 false
+            },
+          },
           data: [
             {
               value: [4200, 3000, 20000, 35000, 50000, 18000],
@@ -193,7 +248,16 @@ function Jdatalt() {
         <div className="income_left">
           <div id={"main5"} style={{ height: 150 }}></div>
         </div>
-        <div className="income_right"></div>
+        <div className="income_right">
+          {iconData.map((item, index) => {
+            return (
+              <div key={index} className="income_icon">
+                <img src={require("../../images/Jhome/tj_icon.png")} alt="" />
+                <span>{item.name}</span>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );

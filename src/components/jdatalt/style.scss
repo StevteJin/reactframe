@@ -74,13 +74,31 @@
       }
     }
   }
-  .jdata_lt_income{
-    .income_left{
-      
+  .jdata_lt_income {
+    .income_left {
+      width: 200px;
+      height: 200px;
+      float: left;
+      margin-left: 18px;
     }
-    .income_right{
-
+    .income_right {
+      float: left;
+      margin-left: 18px;
+      .income_icon {
+        margin-bottom: 20px;
+        img {
+          width: 16px;
+          height: 16px;
+          margin-right: 6px;
+        }
+        span {
+          font-size: 14px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #fbe3a3;
+          display: inline-block;
+        }
+      }
     }
   }
-
 }
