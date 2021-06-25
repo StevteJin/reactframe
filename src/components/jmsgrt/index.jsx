@@ -99,6 +99,15 @@ function Jmsgrt() {
           );
         })}
       </div>
+      <div className="jmsg_rt_title">
+        <img src={require("../../images/Jhome/icon-1.png")} alt="" />
+        <span>特色景区宣传</span>
+      </div>
+      <img
+        className="jmsg_rt_xc"
+        src={require("../../images/Jhome/xc.png")}
+        alt=""
+      />
     </div>
   );
 }
