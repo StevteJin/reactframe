@@ -24,7 +24,7 @@ import Jguide from "../../components/jguide/index";
 //村情信息左边
 import Jmsglt from "../../components/jmsglt/index";
 //村情信息右边
-
+import Jmsgrt from "../../components/jmsgrt/index";
 //金改写 end
 
 class Index extends Component {
@@ -234,6 +234,7 @@ class Index extends Component {
 
           {/* <Jguide /> */}
           <Jmsglt />
+          <Jmsgrt />
           {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>
