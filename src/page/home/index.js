@@ -25,6 +25,10 @@ import Jguide from "../../components/jguide/index";
 import Jmsglt from "../../components/jmsglt/index";
 //村情信息右边
 import Jmsgrt from "../../components/jmsgrt/index";
+//数据中心左边
+import Jdatalt from "../../components/jdatalt/index";
+//数据中心右边
+
 //金改写 end
 
 class Index extends Component {
@@ -224,17 +228,20 @@ class Index extends Component {
           <div>
             <Jfooter />
           </div>
-
+          {/* 首页 */}
           {/* <div>
             <Jhomelt />
           </div>
           <div>
             <Jhomert />
           </div> */}
-
+          {/* 智慧导游 */}
           {/* <Jguide /> */}
-          <Jmsglt />
-          <Jmsgrt />
+          {/* 村情信息 */}
+          {/* <Jmsglt />
+          <Jmsgrt /> */}
+          {/* 数据中心 */}
+          <Jdatalt />
           {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>

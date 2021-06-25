@@ -1,0 +1,86 @@
+.jdata_lt_box {
+  width: 23%; //438px
+  height: 88%; //950px
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid #ffbd75;
+  overflow: hidden;
+  position: absolute;
+  left: 10px;
+  top: 6%;
+  .jdata_lt_title {
+    background-image: url(../../images/Jhome/e_title_bg.png);
+    width: 41.32%; //181px
+    height: 2.7%; //26px
+    background-size: 100% 100%;
+    margin-left: 18px;
+    margin-top: 13px;
+    margin-bottom: 3.68%; //35px
+    padding-top: 1%;
+    padding-bottom: 1%;
+    overflow: hidden;
+    img {
+      width: 11%;
+      margin-left: 16px;
+      float: left;
+    }
+    span {
+      font-size: 18px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #ffe6a6;
+      display: inline-block;
+      margin-left: 6px;
+    }
+  }
+  .jdata_lt_tj {
+    margin-left: 18px;
+    .tj_box:first-child {
+      margin-right: 54px;
+    }
+    .tj_box {
+      float: left;
+
+      img {
+        width: 54px;
+        height: 62px;
+        float: left;
+        margin-right: 14px;
+      }
+      .tj_rt {
+        float: left;
+        .tj_rt_name {
+          font-size: 18px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #fff9e9;
+        }
+        .tj_rt_vn {
+          margin-top: 17px;
+          .tj_rt_value {
+            font-size: 30px;
+            font-family: PangMenZhengDao;
+            font-weight: 400;
+            font-style: italic;
+            color: #ffe6a6;
+          }
+          .tj_rt_note {
+            font-size: 22px;
+            font-family: PangMenZhengDao;
+            font-weight: 400;
+            font-style: italic;
+            color: #ffe6a6;
+          }
+        }
+      }
+    }
+  }
+  .jdata_lt_income{
+    .income_left{
+      
+    }
+    .income_right{
+
+    }
+  }
+
+}
