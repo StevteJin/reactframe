@@ -100,11 +100,12 @@
   }
   .jmsg_category {
     .jmsg_category_title {
-      margin-left:31px;
+      margin-left: 31px;
       img {
         width: 26px;
         height: 18px;
         float: left;
+        margin-right: 9px;
       }
       span {
         font-size: 16px;
@@ -112,6 +113,16 @@
         font-weight: 400;
         color: #ffbd75;
         display: inline-block;
+      }
+    }
+    .jmsg_echarts_bg {
+      width: 438px;
+      background-image: url("../../images/Jhome/ec_bg.png");
+      background-size: 144px 144px;
+      margin-top: 24px;
+      background-repeat: no-repeat;
+      background-position: center;
+      #main2 {
       }
     }
   }

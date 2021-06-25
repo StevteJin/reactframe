@@ -32,31 +32,23 @@ function Jmsglt() {
     let datas = [
       ////////////////////////////////////////
       [
-        { name: "药材类", value: 25 },
-        { name: "粮油类", value: 25 },
-        { name: "水产类", value: 25 },
         { name: "瓜果类", value: 25 },
+        { name: "水产类", value: 25 },
+        { name: "粮油类", value: 25 },
+        { name: "药材类", value: 25 },
       ],
     ];
     let option = {
-      title: {
-        left: "center",
-        textStyle: {
-          color: "#999",
-          fontWeight: "normal",
-          fontSize: 14,
-        },
-      },
+      color: ["#FFBC75", "#FF7723", "#FFE6A6", "#FFFBE8"],
       series: datas.map(function (data, idx) {
         return {
           type: "pie",
-          radius: [40, 60],
-          top: "100px",
-          height: "33.33%",
+          radius: [35, 50],
+          top: "0",
           left: "center",
-          width: 400,
+          width: 600,
           itemStyle: {
-            borderColor: "#fff",
+            borderColor: "#FFBD75",
             borderWidth: 1,
           },
           label: {
@@ -67,14 +59,13 @@ function Jmsglt() {
             lineHeight: 15,
             rich: {
               time: {
-                fontSize: 10,
-                color: "#999",
+                fontSize: 12,
               },
             },
           },
           labelLine: {
-            length: 15,
-            length2: 0,
+            length: 30,
+            length2: 120,
             maxSurfaceAngle: 80,
           },
           labelLayout: function (params) {
@@ -160,8 +151,14 @@ function Jmsglt() {
           <img src={require("../../images/Jhome/nong.png")} alt="" />
           <span>农产品类别占比</span>
         </div>
-        <div>
+        <div className="jmsg_echarts_bg">
           <div id={"main2"} style={{ height: 200 }}></div>
+        </div>
+      </div>
+      <div className="jmsg_category">
+        <div className="jmsg_category_title">
+          <img src={require("../../images/Jhome/nong.png")} alt="" />
+          <span>农产品收入统计</span>
         </div>
       </div>
     </div>
