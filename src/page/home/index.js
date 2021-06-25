@@ -28,7 +28,7 @@ import Jmsgrt from "../../components/jmsgrt/index";
 //数据中心左边
 import Jdatalt from "../../components/jdatalt/index";
 //数据中心右边
-
+import Jdatart from "../../components/jdatart/index";
 //金改写 end
 
 class Index extends Component {
@@ -242,6 +242,7 @@ class Index extends Component {
           <Jmsgrt /> */}
           {/* 数据中心 */}
           <Jdatalt />
+          <Jdatart />
           {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>
