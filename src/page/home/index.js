@@ -243,6 +243,7 @@ class Index extends Component {
           {/* 数据中心 */}
           <Jdatalt />
           <Jdatart />
+          
           {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>

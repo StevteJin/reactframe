@@ -1,14 +1,15 @@
 .j_header {
-    min-width: 1920px;
-    max-width: 100%;
-    height:10%;//设计稿height109px;
-    background-image: url(../../images/Jhome/title666.png);
-    background-size: 100% 100%;
-    background-color: transparent;
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%);
-    top: 0px;
+  min-width: 1920px;
+  max-width: 100%;
+  height: 10%; //设计稿height109px;
+  background-image: url(../../images/Jhome/title666.png);
+  background-size: 100% 100%;
+  background-color: transparent;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 0px;
+  .j_header_title {
     font-size: 34px;
     font-family: ShiShangZhongHeiJianTi;
     font-weight: 400;
@@ -16,5 +17,31 @@
     text-shadow: 1px 4px 0px rgba(112, 88, 72, 0.55);
     text-align: center;
     line-height: 69px;
+    width: 303px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
   }
-  
+  .j_header_right_title {
+    float: right;
+    .j_header_right_co {
+      float: left;
+      margin-right: 70px;
+      img {
+        width: 32px;
+        height: 32px;
+        margin-top: 7px;
+        margin-right: 9px;
+        float: left;
+      }
+      span {
+        font-size: 18px;
+        font-family: PingFang SC;
+        font-weight: 100;
+        color: #ffeeda;
+        line-height: 49px;
+        display: inline-block;
+      }
+    }
+  }
+}
