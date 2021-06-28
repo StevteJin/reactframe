@@ -10,6 +10,9 @@ function Jheader() {
 
   return (
     <div className="j_header">
+      <div className="j_header_left_co">
+        13:55:09 星期四 04-29-2021 30°C pm2.5:125 晴
+      </div>
       <div className="j_header_title">智慧乡村治理平台</div>
       <div className="j_header_right_title">
         <div className="j_header_right_co">
