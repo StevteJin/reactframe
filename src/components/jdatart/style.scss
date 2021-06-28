@@ -39,6 +39,7 @@
     overflow: hidden;
     background-size: 100%;
     margin-left: 19px;
+    margin-bottom: 38px;
     .sun_date {
       font-size: 14px;
       font-family: PingFang SC;
@@ -75,7 +76,15 @@
         }
       }
       .sun0 {
+        img {
+          width: 58px;
+          height: 58px;
+          margin-top: -7px;
+        }
       }
     }
+  }
+  .ly_echart {
+    margin-bottom: 36px;
   }
 }

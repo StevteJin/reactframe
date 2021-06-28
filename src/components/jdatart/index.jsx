@@ -242,7 +242,7 @@ function Jhomert() {
         <img src={require("../../images/Jhome/icon-1.png")} alt="" />
         <span>旅游收入统计</span>
       </div>
-      <div>
+      <div className="ly_echart">
         <div id={"mains"} style={{ height: 200 }}></div>
       </div>
       <div className="jdata_rt_title">
