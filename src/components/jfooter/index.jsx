@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./style.scss";
 import { useLocation } from "react-router-dom";
 
-function Jfooter() {
+function Jfooter(param) {
   const [activeValue, setActive] = useState("home");
   const { pathname } = useLocation(); //存储当前路由地址`
   const navData = [
@@ -31,9 +31,12 @@ function Jfooter() {
       value: "data",
     },
   ];
+  // console.log('父传的',param.getInfo)
   const handle_top = (item, index) => {
     setActive(item.value);
+    param.getInfo(item.value)
   };
+    
   useEffect(() => {}, []);
 
   return (

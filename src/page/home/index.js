@@ -40,6 +40,7 @@ class Index extends Component {
       searchName: "", //搜索内容
       searchList: [], //搜索内容列表
       KeLi: 0, //客流
+      activeNow: "home", //导航哪个
     };
     Index.this = this;
     this.SearchContent = this.SearchContent.bind(this); //搜索功能
@@ -209,8 +210,14 @@ class Index extends Component {
   handleSwitch(e) {
     console.log(e.target.checked, "ee");
   }
+
+  getInfo = (e) => {
+    console.log("值啊值", e);
+    this.setState({ activeNow: e });
+  };
+
   render() {
-    const { searchName, searchList, alarmFlag, KeLi } = this.state;
+    const { searchName, searchList, alarmFlag, KeLi, activeNow } = this.state;
     return (
       <DocumentTitle title="图为视智慧安防三维平台">
         <Fragment>
@@ -226,24 +233,51 @@ class Index extends Component {
             <Jheader />
           </div>
           <div>
-            <Jfooter />
+            <Jfooter getInfo={this.getInfo} />
           </div>
           {/* 首页 */}
-          {/* <div>
-            <Jhomelt />
-          </div>
-          <div>
-            <Jhomert />
-          </div> */}
+          {activeNow == "home" ? (
+            <div>
+              <div>
+                <Jhomelt />
+              </div>
+              <div>
+                <Jhomert />
+              </div>
+            </div>
+          ) : (
+            ""
+          )}
+
           {/* 智慧导游 */}
-          {/* <Jguide /> */}
+          {activeNow == "guide" ? (
+            <div>
+              <Jguide />
+            </div>
+          ) : (
+            ""
+          )}
+
           {/* 村情信息 */}
-          {/* <Jmsglt />
-          <Jmsgrt /> */}
+          {activeNow == "vmsg" ? (
+            <div>
+              <Jmsglt />
+              <Jmsgrt />
+            </div>
+          ) : (
+            ""
+          )}
+
           {/* 数据中心 */}
-          <Jdatalt />
-          <Jdatart />
-          
+          {activeNow == "data" ? (
+            <div>
+              <Jdatalt />
+              <Jdatart />
+            </div>
+          ) : (
+            ""
+          )}
+
           {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>
