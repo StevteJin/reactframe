@@ -32,4 +32,50 @@
       margin-left: 6px;
     }
   }
+  .sun_box {
+    width: 400px;
+    height: 168px;
+    background-image: url(../../images/Jhome/sun-bj.png);
+    overflow: hidden;
+    background-size: 100%;
+    margin-left: 19px;
+    .sun_date {
+      font-size: 14px;
+      font-family: PingFang SC;
+      font-weight: 400;
+      color: #fffbef;
+      float: right;
+      margin-right: 20px;
+      margin-top: 20px;
+    }
+    .sun_big_con {
+      display: flex;
+      width: 370px;
+      .sun_con {
+        flex: 1;
+        text-align: center;
+        img {
+          width: 30px;
+          height: 30px;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+        .sun_name {
+          font-size: 16px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #fffbef;
+          margin-bottom: 10px;
+        }
+        .sun_value {
+          font-size: 16px;
+          font-family: PingFang SC;
+          font-weight: 400;
+          color: #ffffff;
+        }
+      }
+      .sun0 {
+      }
+    }
+  }
 }
