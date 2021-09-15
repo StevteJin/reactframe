@@ -144,6 +144,7 @@ const mapDispatch = (dispatch) => ({
         Common.Close();
         dispatch(actionCreators.nav_click(item));
         axios.get(global.Url+'sys/config').then((res) => {
+            console.log('3执');
             const result = res.data.data;
             if(result) {
                 console.log(result);

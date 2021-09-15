@@ -38,7 +38,7 @@ class Header extends Component{
         })
     };
     //获取平台配置
-    HQConfig(){
+    HQConfig(){console.log('4执');
         axios.get(global.Url+'sys/config').then((res) => {
             const result = res.data.data;
             if(result) {

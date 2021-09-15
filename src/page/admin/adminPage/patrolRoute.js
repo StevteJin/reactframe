@@ -135,7 +135,7 @@ class PatrolRoute extends PureComponent{
         })
     }
     //页面数据加载
-    Loading(){
+    Loading(){console.log('是不是每次执行这里的')
             axios.get(global.Url+'patrol/line/list').then((res) => {
                 const result = res.data.data;
                 if(result) {

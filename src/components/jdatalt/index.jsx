@@ -144,7 +144,7 @@ function Jdatalt() {
           { name: "浮梁古县衙", max: 38000 },
           { name: "瑶里古镇", max: 52000 },
         ],
-        center: ["50%", "60%"],
+        radius: 40,
       },
       series: [
         {
@@ -238,7 +238,7 @@ function Jdatalt() {
         <span>财政统计</span>
       </div>
       <div>
-        <div id={"main4"} style={{ height: 400 }}></div>
+        <div id={"main4"} style={{ height: 360 }}></div>
       </div>
       <div className="jdata_lt_title">
         <img src={require("../../images/Jhome/icon-1.png")} alt="" />
@@ -246,7 +246,7 @@ function Jdatalt() {
       </div>
       <div className="jdata_lt_income">
         <div className="income_left">
-          <div id={"main5"} style={{ height: 150 }}></div>
+          <div id={"main5"} style={{ height: 240 }}></div>
         </div>
         <div className="income_right">
           {iconData.map((item, index) => {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./style.scss";
 import { useLocation } from "react-router-dom";
+import TextLoop from "react-text-loop";
 
 function Jfooter(param) {
   const [activeValue, setActive] = useState("home");
@@ -36,8 +37,8 @@ function Jfooter(param) {
     setActive(item.value);
     param.getInfo(item.value)
   };
-    
-  useEffect(() => {}, []);
+
+  useEffect(() => { }, []);
 
   return (
     <div className="j_footer">
@@ -72,7 +73,14 @@ function Jfooter(param) {
       </ul>
       <div className="j_right">
         <img src={require("../../images/Jhome/gonggao.png")} alt="" />
-        <span>境内山青水秀,景色宜人,环境优美，看到水沟有积水的地</span>
+        {/* <span>境内山青水秀,景色宜人,环境优美，看到水沟有积水的地!</span> */}
+        <div class="notice-container">
+          <i class="horn fa fa-bullhorn"></i>
+          <div class="header-notice-marquee" id="notice-marquee">
+            <span class="header-marquee-item1">境内山青水秀,景色宜人,环境优美，看到水沟有积水的地!</span>
+            <span class="header-marquee-item2">境内山青水秀,景色宜人,环境优美，看到水沟有积水的地!</span>
+          </div>
+        </div> 
       </div>
     </div>
   );

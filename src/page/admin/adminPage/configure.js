@@ -42,6 +42,7 @@ class Configure extends PureComponent{
         var that =this;
         axios.get(global.Url+'sys/config').then((res) => {
             const result = res.data.data;
+            console.log('1执');
             if(result) {
                 console.log(result);
                 sessionStorage.setItem('adminTitle',result.sys_name);
@@ -502,6 +503,7 @@ const mapDispatch = (dispatch) => ({
             Common.Close();
             dispatch(actionCreators.nav_click(item));
             axios.get(global.Url+'sys/config').then((res) => {
+                console.log('2执');
                 const result = res.data.data;
                 if(result) {
                     console.log(result);

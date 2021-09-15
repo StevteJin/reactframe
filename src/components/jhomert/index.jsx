@@ -201,7 +201,7 @@ function Jhomert() {
           );
         })}
       </div>
-      <div className="e_top_title">
+      <div className="e_top_title e_top_title2">
         <img src={require("../../images/Jhome/icon-1.png")} alt="" />
         <span>应急预案</span>
       </div>
@@ -217,7 +217,7 @@ function Jhomert() {
           <div className="y_btn">设为误报</div>
         </div>
       </div>
-      <div className="e_top_title">
+      <div className="e_top_title e_top_title3">
         <img src={require("../../images/Jhome/icon-1.png")} alt="" />
         <span>防疫情况</span>
       </div>

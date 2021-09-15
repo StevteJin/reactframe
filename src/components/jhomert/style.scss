@@ -10,21 +10,21 @@
   .e_top_title {
     background-image: url(../../images/Jhome/e_title_bg.png);
     width: 41.32%; //181px
-    height: 2.7%; //26px
+    height: 2.2%; //26px
     background-size: 100% 100%;
     margin-left: 18px;
-    margin-top: 13px;
-    margin-bottom: 4.1%; //39px
+    margin-top: 2%;
+    margin-bottom: 6%; //39px
     padding-top: 1%;
     padding-bottom: 1%;
     overflow: hidden;
     img {
-      width: 11%;
+      width: 9%;
       margin-left: 16px;
       float: left;
     }
     span {
-      font-size: 18px;
+      font-size: 16px;
       font-family: PingFang SC;
       font-weight: 400;
       color: #ffe6a6;
@@ -56,17 +56,17 @@
   }
   .people_box {
     width: 91.3%; //400px
-    height: 168px; //168px
+    height: 150px; //168px
     background-image: url(../../images/Jhome/s-bj.png);
     background-size: 100% 100%;
     margin-left: 18px;
     margin-top: 25px;
-    margin-bottom:8%;
+    margin-bottom: 8%;
     overflow: hidden;
     .pic {
-      width: 31.5%; //126px
+      width: 28%; //126px
       // height:126px;//126px
-      margin-top: 6%; //22px
+      margin-top: 4%; //22px
       margin-left: 6.75%; //27px
       float: left;
     }
@@ -101,17 +101,17 @@
     .p_con_box {
       margin-left: 23px;
       float: left;
-      margin-top: 15%;
+      margin-top: 13.5%;
     }
   }
   .y_box {
     background-image: url(../../images/Jhome/y_bg.png);
     background-size: 100% 100%;
     width: 91.32%; //400px
-    height: 16.84%; //160px
+    height: 19%; //160px
     margin-left: 18px;
-    margin-top:6%;
-    margin-bottom:8%;
+    margin-top: 6%;
+    margin-bottom: 8%;
     .y_title {
       overflow: hidden;
       .y_left {
@@ -148,14 +148,14 @@
       font-weight: 400;
       color: #ffeeda;
       margin-left: 18px;
-      margin-top: 2.6%; //20px
+      margin-top: 5%; //20px
     }
     .y_btn_box {
       margin-left: 107px;
-      margin-top: 21px;
+      margin-top: 14px;
       .y_btn {
-        width: 84px;
-        height: 26px;
+        width: 100px;
+        height: 28px;
         background-image: url(../../images/Jhome/anniu.png);
         background-size: 100% 100%;
         font-size: 14px;
@@ -165,15 +165,15 @@
         float: left;
         margin-right: 19px;
         text-align: center;
-        line-height: 26px;
+        line-height: 28px;
         cursor: pointer;
       }
     }
   }
   .yc_box {
-    margin-top:6%;
+    margin-top: 6%;
     .yc_title {
-      font-size: 16px;
+      font-size: 14px;
       font-family: PingFang SC;
       font-weight: 300;
       color: #ffe6a6;

@@ -142,7 +142,7 @@ class Header extends Component {
         }
         //监听message事件
         window.addEventListener("message", window.receiveMessageFromIndex, false);
-
+        console.log('执66667777')
         this.fn();
         this.HQuser(); //先获取用户信息
         this.HQstate();//获取平台配置状态
@@ -150,6 +150,7 @@ class Header extends Component {
         this.onLoadStand();//加载是否需要独立运行
         this.RemoveBombox();//清清除警报
         window.receiveMessageFromIndex = function (e) {
+            console.log('是这里吗,对啊')
             if (e !== undefined) {
                 // console.log('我是地图我接收到了message:', e.data)
                 //  console.log( '我是react,我接受到了来自iframe的模型ID：', e.data);
@@ -310,7 +311,7 @@ class Header extends Component {
         })
     };
     //获取平台配置
-    HQConfig() {
+    HQConfig() {console.log('执行了没有啊');
         axios.get(global.Url + 'sys/config').then((res) => {
             const result = res.data.data;
             if (result) {

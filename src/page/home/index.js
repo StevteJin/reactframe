@@ -222,63 +222,65 @@ class Index extends Component {
       <DocumentTitle title="图为视智慧安防三维平台">
         <Fragment>
           <div className="IndexHome">
-            <div className="left"></div>
-            <div className="right"></div>
+            {/* <div className="left"></div>
+            <div className="right"></div> */}
+            {/* 金 start */}
+            <div>
+              <Jheader />
+            </div>
+            <div>
+              <Jfooter getInfo={this.getInfo} />
+            </div>
+            {/* 首页 */}
+            {activeNow == "home" ? (
+              <div>
+                <div>
+                  <Jhomelt />
+                </div>
+                <div>
+                  <Jhomert />
+                </div>
+              </div>
+            ) : (
+              ""
+            )}
+
+            {/* 智慧导游 */}
+            {activeNow == "guide" ? (
+              <div>
+                <Jguide />
+              </div>
+            ) : (
+              ""
+            )}
+
+            {/* 村情信息 */}
+            {activeNow == "vmsg" ? (
+              <div>
+                <Jmsglt />
+                <Jmsgrt />
+              </div>
+            ) : (
+              ""
+            )}
+
+            {/* 数据中心 */}
+            {activeNow == "data" ? (
+              <div>
+                <Jdatalt />
+                <Jdatart />
+              </div>
+            ) : (
+              ""
+            )}
+
+            {/* 金 end */}
             <div className="conent">
+              {/* 该处导致点击切换导航一直刷新的 */}
               <CesiumConent></CesiumConent>
             </div>
           </div>
-          {/* 金 start */}
-          <div>
-            <Jheader />
-          </div>
-          <div>
-            <Jfooter getInfo={this.getInfo} />
-          </div>
-          {/* 首页 */}
-          {activeNow == "home" ? (
-            <div>
-              <div>
-                <Jhomelt />
-              </div>
-              <div>
-                <Jhomert />
-              </div>
-            </div>
-          ) : (
-            ""
-          )}
 
-          {/* 智慧导游 */}
-          {activeNow == "guide" ? (
-            <div>
-              <Jguide />
-            </div>
-          ) : (
-            ""
-          )}
-
-          {/* 村情信息 */}
-          {activeNow == "vmsg" ? (
-            <div>
-              <Jmsglt />
-              <Jmsgrt />
-            </div>
-          ) : (
-            ""
-          )}
-
-          {/* 数据中心 */}
-          {activeNow == "data" ? (
-            <div>
-              <Jdatalt />
-              <Jdatart />
-            </div>
-          ) : (
-            ""
-          )}
-
-          {/* 金 end */}
           {/* <div className="header">
             <Header alarmFlag={alarmFlag}></Header>
           </div> */}

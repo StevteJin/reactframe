@@ -10,7 +10,7 @@
   .jmsg_rt_title {
     background-image: url(../../images/Jhome/e_title_bg.png);
     width: 41.32%; //181px
-    height: 2.7%; //26px
+    height: 2.2%; //26px
     background-size: 100% 100%;
     margin-left: 18px;
     margin-top: 13px;
@@ -19,12 +19,12 @@
     padding-bottom: 1%;
     overflow: hidden;
     img {
-      width: 11%;
+      width: 9%;
       margin-left: 16px;
       float: left;
     }
     span {
-      font-size: 18px;
+      font-size: 16px;
       font-family: PingFang SC;
       font-weight: 400;
       color: #ffe6a6;
@@ -144,14 +144,14 @@
           text-align: center;
           line-height: 26px;
           display: inline-block;
-          width:26px;
+          width: 26px;
         }
       }
     }
   }
   .jmsg_rt_xc {
-    width:400px;
-    height:198px;
-    margin-left:19px;
+    width: 400px;
+    height: 198px;
+    margin-left: 19px;
   }
 }
